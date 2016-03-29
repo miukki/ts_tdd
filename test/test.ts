@@ -1,3 +1,6 @@
+///<reference path="../typings/tsd.d.ts"/>
+
+
 function add (a, b) { return a + b; };
 function fn(){ throw('err')}
 

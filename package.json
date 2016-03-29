@@ -2,19 +2,24 @@
   "name": "ts_project",
   "version": "1.0.0",
   "scripts": {
-   "test": "mocha"
+    "compile": "sh scripts/compile",
+    "pretest": "npm run compile",
+    "install_typings": "node node_modules/tsd/build/cli.js install",
+    "postinstall": "npm run install_typings && npm run test",
+    "test": "mocha"
   },
   "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "expect.js": "^0.3.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "karma-mocha": "^0.2.2",
+    "mocha": "^2.4.5",
+    "tsd": "^0.6.5",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.9"
   },
   "author": "",
   "license": "ISC"

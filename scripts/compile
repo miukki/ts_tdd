@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo 'compile src'
+node node_modules/typescript/bin/tsc -p ./
+echo 'compile src >> DONE'
+
+echo 'compile test'
+node node_modules/typescript/bin/tsc ./test/*.ts
+echo 'compile test >> DONE'
