@@ -7,3 +7,7 @@ echo 'compile src >> DONE'
 echo 'compile test'
 node node_modules/typescript/bin/tsc ./test/*.ts
 echo 'compile test >> DONE'
+
+echo 'compile karma.conf.ts'
+node node_modules/typescript/bin/tsc ./karma.conf.ts
+echo 'compile karma.conf.ts >> DONE'
