@@ -11,3 +11,7 @@ echo 'compile test >> DONE'
 echo 'compile karma.conf.ts'
 node node_modules/typescript/bin/tsc ./karma.conf.ts
 echo 'compile karma.conf.ts >> DONE'
+
+echo 'compile gulpfile.ts'
+node node_modules/typescript/bin/tsc ./gulpfile.ts -m commonjs
+echo 'compile gulpfile.ts >> DONE'

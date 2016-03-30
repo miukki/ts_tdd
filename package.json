@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "compile": "sh scripts/clean && sh scripts/compile",
-    "pretest": "npm run compile",
     "install_typings": "node node_modules/tsd/build/cli.js install",
     "postinstall": "npm run install_typings && sh scripts/copy && npm run test",
-    "test": "node_modules/karma/bin/karma start"
+    "pretest": "npm run compile",
+    "test": "node_modules/karma/bin/karma start",
+    "minify": "node node_modules/gulp/bin/gulp.js minify",
+    "minify_test": "npm run compile && npm run minify && node_modules/karma/bin/karma start"
   },
   "description": "",
   "main": "index.js",
@@ -15,6 +17,8 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.3",
     "karma": "^0.13.22",
     "karma-coverage": "^0.5.5",
     "karma-mocha": "^0.2.2",
