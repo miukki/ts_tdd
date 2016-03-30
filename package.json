@@ -2,7 +2,7 @@
   "name": "ts_project",
   "version": "1.0.0",
   "scripts": {
-    "compile": "sh scripts/compile",
+    "compile": "sh scripts/clean && sh scripts/compile",
     "pretest": "npm run compile",
     "install_typings": "node node_modules/tsd/build/cli.js install",
     "postinstall": "npm run install_typings && sh scripts/copy && npm run test",
