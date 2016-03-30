@@ -12,4 +12,13 @@ describe('utils', () => {
         
     });
     
+    it('isEmpty', () => {
+        
+        expect(utils.isEmpty(null)).to.be(true);
+        expect(utils.isEmpty(undefined)).to.be(true);
+        expect(utils.isEmpty(0)).to.be(false);
+        expect(utils.isEmpty('')).to.be(false);
+        
+    });
+    
 });
