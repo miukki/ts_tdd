@@ -11,7 +11,8 @@
     "minify_test": "npm run compile && npm run minify && node_modules/karma/bin/karma start"
   },
   "description": "",
-  "main": "index.js",
+  "main": "dist/ts_project.js",
+  "typings": "dist/ts_project.d.ts",
   "directories": {
     "test": "test"
   },
