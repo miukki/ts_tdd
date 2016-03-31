@@ -8,7 +8,8 @@
     "pretest": "npm run compile",
     "test": "node_modules/karma/bin/karma start",
     "minify": "node node_modules/gulp/bin/gulp.js minify",
-    "minify_test": "npm run compile && npm run minify && node_modules/karma/bin/karma start"
+    "minify_test": "npm run compile && npm run minify && node_modules/karma/bin/karma start",
+    "watch": "npm run compile && node node_modules/gulp/bin/gulp.js watch"
   },
   "description": "",
   "main": "dist/ts_project.js",

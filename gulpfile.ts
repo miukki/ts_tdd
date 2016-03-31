@@ -4,16 +4,16 @@ import gulp = require('gulp');
 import uglify = require('gulp-uglify');
 import childProcess = require('child_process');
 
-gulp.task('minify', ['compile'], () => {
-    
+gulp.task('minify', () => {
+
     return gulp.src('./dist/ts_project.js')
         .pipe(uglify())
         .pipe(gulp.dest('./dist/'));
-    
+
 });
 
 gulp.task('compile', () => {
-    childProcess.execSync('npm run compile');    
+    childProcess.execSync('npm run compile');
 });
 
 gulp.task('test', () => {
@@ -25,3 +25,7 @@ gulp.task('minify_test', () => {
 });
 
 gulp.task('default', ['test']);
+
+gulp.task('watch', () => {
+  gulp.watch(['./src/*.ts'], ['compile']);
+});
