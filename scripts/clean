@@ -6,7 +6,6 @@ echo 'clean dist >> DONE'
 
 echo 'clean test'
 rm test/*.js
-rm test/*.map
 echo 'clean test >> DONE'
 
 echo 'clean coverage'
