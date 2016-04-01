@@ -8,8 +8,7 @@
     "target": "es5",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "declaration": true,
-    "module": "commonjs"
+    "declaration": true
   },
   "exclude": [
     "dist",
