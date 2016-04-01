@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+echo 'check tslint:src'
+node node_modules/tslint/bin/tslint src/*.ts || exit 1
+echo 'tslint =>> ok'
+
+
+echo 'check tslint:test'
+node node_modules/tslint/bin/tslint test/*.ts || exit 1
+echo 'tslint =>> ok'
+
+exit 0
+
+
+

@@ -2,9 +2,7 @@
 
 echo 'pre commit hook'
 
-echo 'check tslint'
-node node_modules/tslint/bin/tslint src/*.ts || exit 1
-echo 'tslint =>> ok'
+npm run tslint || exit 1
 
 echo 'run tests'
 npm run minify_test || exit 1

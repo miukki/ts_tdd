@@ -5,3 +5,4 @@ typings
 **/*.js
 **/*.map
 /coverage
+npm-debug.log
